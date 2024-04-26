@@ -1,2 +1,23 @@
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Venta Productos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" [ngClass]="{active: menuOption == 'home'}" (click)="onOption('home')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="products" [ngClass]="{active: menuOption == 'products'}" (click)="onOption('products')">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact" [ngClass]="{active: menuOption == 'contact'}" (click)="onOption('contact')">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
 
 <router-outlet />
