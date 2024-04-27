@@ -10,7 +10,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  menuOption: string = 'home';
+  menuOption: string = '';
 
 
   onOption(menuOption: string) {
