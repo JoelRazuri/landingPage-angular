@@ -9,9 +9,6 @@ import { IProduct } from '../models/product.models';
 export class ApiService {
 
   baseUrl: string = 'https://fakestoreapi.com/products';
-
-  constructor() { }
-
   private _apiService  = inject(HttpClient);
 
 
