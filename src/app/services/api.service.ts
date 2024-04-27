@@ -19,17 +19,4 @@ export class ApiService {
   getProductById(id: number): Observable<IProduct> {
     return this._apiService.get<IProduct>(`${this.baseUrl}/${id}`);
   }
-
-  createProduct(product: IProduct): Observable<IProduct> {
-    return this._apiService.post<IProduct>(this.baseUrl, product);
-  }
-
-  updateProduct(id: number, product: IProduct): Observable<IProduct> {
-    return this._apiService.put<IProduct>(`${this.baseUrl}/${id}`, product);
-  }
-
-  deleteProduct(id: number): Observable<IProduct> {
-    return this._apiService.delete<IProduct>(`${this.baseUrl}/${id}`);
-  }
-  
 }
