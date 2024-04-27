@@ -19,7 +19,7 @@
               <td>{{ product.category }}</td>
               <td>{{ product.price | currency}}</td>
               <td>
-                  <a class="btn btn-primary" routerLink="products/product.id">Detail</a>
+                  <a class="btn btn-outline-primary" (click)="navigate(product.id)">Detail</a>
               </td>
             </tr>
             }
