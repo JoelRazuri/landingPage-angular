@@ -1,1 +1,75 @@
-<p>contact works!</p>
+<div class="content-form">
+    <div class="contact__wrapper shadow-lg mt-n9">
+        <div class="row no-gutters">
+            <div class="contact-form__wrapper p-5 order-lg-1">
+                <form [formGroup]="contactForm" class="contact-form form-validate" novalidate="novalidate" (submit)="send($event)">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Albert" formControlName="firstName" [ngClass]="{'is-invalid': hasErrors('firstName', 'required') || hasErrors('firstName', 'minlength')}">
+                                @if (hasErrors('firstName', 'required')) {
+                                    <span class="text-danger">You have to complete this field</span>
+                                }
+                                @if (hasErrors('firstName', 'minlength')) {
+                                    <span class="text-danger">You have to write at least 4 characters</span>
+                                }
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Appleseed" formControlName="lastName" [ngClass]="{'is-invalid': hasErrors('lastName', 'required') || hasErrors('lastName', 'minlength')}">
+                                @if (hasErrors('lastName', 'required')) {
+                                    <span class="text-danger">You have to complete this field</span>
+                                }
+                                @if (hasErrors('lastName', 'minlength')) {
+                                    <span class="text-danger">You have to write at least 4 characters</span>
+                                }
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="albert.apple@seed.com" formControlName="email" [ngClass]="{'is-invalid': hasErrors('email', 'required') || hasErrors('email', 'email')}">
+                                @if (hasErrors('email', 'required')) {
+                                    <span class="text-danger">You have to complete this field</span>
+                                }
+                                @if (hasErrors('email', 'email')) {
+                                    <span class="text-danger">Invalid email format</span>
+                                }
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="(021)-454-545" formControlName="phone" [ngClass]="{'is-invalid': hasErrors('phone', 'required')}">
+                                @if (hasErrors('phone', 'required')) {
+                                <span class="text-danger">You have to complete this field</span>
+                                }
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="message">How can we help?</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Hi there, I would like to....." formControlName="message" [ngClass]="{'is-invalid': hasErrors('message', 'required')}"></textarea>
+                                @if (hasErrors('message', 'required')) {
+                                    <span class="text-danger">You have to complete this field</span>
+                                    }
+                            </div>
+                        </div>
+    
+                        <div class="content-b mt-4">
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        </div>
+    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
