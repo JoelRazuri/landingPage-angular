@@ -1,0 +1,57 @@
+.content-loading {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0em 5em;
+}
+
+.content-img-title {
+    display: flex;
+    margin: 3em 0em;
+    width: 100%;
+    height: 35em;
+}
+
+.category {
+    color: grey;
+    font-weight: 400;
+}
+
+.content-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    padding-left: 5em;
+    width: 40%;
+}
+
+.content-rating-count {
+    display: flex;
+    width: 33%;
+    justify-content: space-between;
+}
+
+
+.content-description p {
+    font-size: large;
+}

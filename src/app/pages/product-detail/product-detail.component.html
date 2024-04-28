@@ -1,1 +1,32 @@
-<p>product-detail works!</p>
+@if (loading) {
+    <div class="content-loading">
+        <h2>Loading...</h2>
+    </div>
+}
+
+@if (!loading) {
+    <div class="content-card">
+        <div class="content-img-title">
+            <div class="content-img">
+                <img src="{{ product?.image }}" alt="imagen del producto">
+            </div>
+            <div class="content-title">
+                <div>
+                    <h2>{{ product?.title }}</h2>
+                    <hr>
+                </div>
+                <h5 class="category">Category: {{ product?.category | titlecase }}</h5>
+                <div class="content-rating-count">
+                    <h5>Rating: {{ product?.rating?.rate }}</h5>
+                    <h5>Stock: {{ product?.rating?.count }}</h5>
+                </div>
+                <h4>Price: {{ product?.price | currency }}</h4>
+            </div>
+        </div>
+        <div class="content-description">
+            <h2>Description:</h2>
+            <p>{{ product?.description }}.</p>
+        </div>
+    </div>
+}
+
